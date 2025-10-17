@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Sample Book Download Page</title>
+    <title>Sample Page</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -11,10 +11,9 @@
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
         flex-direction: column;
+        justify-content: space-between; /* Ensures footer stays at the bottom */
+        min-height: 100vh;
       }
 
       .book-container {
@@ -62,13 +61,19 @@
         background-color: #45a049;
       }
 
-       footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 30px;
-    }
+      footer {
+        background-color: #333; /* Dark background to match the header */
+        color: white; /* White text for contrast */
+        text-align: center; /* Center the text */
+        padding: 20px 0; /* Add padding to make it more spacious */
+        margin-top: 40px; /* Add space above the footer */
+        border-top: 2px solid #444; /* Optional: adds a subtle border to separate footer from content */
+        font-size: 14px; /* Smaller text size for footer */
+      }
+
+      footer p {
+        margin: 0; /* Remove any extra margin from the paragraph */
+      }
     </style>
   </head>
 
@@ -81,7 +86,9 @@
       <div class="book-item">
         <img src="files/LinuxEnterpriseCluster.jpg" alt="Book 1" />
         <h3>Linux Enterprise Cluster</h3>
-        <a href="files/LinuxEnterpriseCluster.pdf" class="download-btn">Download</a>
+        <a href="files/LinuxEnterpriseCluster.pdf" class="download-btn"
+          >Download</a
+        >
       </div>
       <div class="book-item">
         <img src="files/ObjectOrientedPHP.jpeg" alt="Book 2" />
@@ -98,6 +105,5 @@
     <footer>
       <p>&copy; 2025 Sample Page. All rights reserved.</p>
     </footer>
-
   </body>
 </html>
