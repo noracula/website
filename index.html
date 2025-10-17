@@ -206,31 +206,70 @@
         }
       }
 
-      footer {
-        background-color: #333; /* Dark background to match the header */
-        color: white; /* White text for contrast */
-        text-align: center; /* Center the text */
-        padding: 20px 0; /* Add padding to make it more spacious */
-        margin-top: 40px; /* Add space above the footer */
-        border-top: 2px solid #444; /* Optional: adds a subtle border to separate footer from content */
-        font-size: 14px; /* Smaller text size for footer */
+      /* Background Gradient */
+      body {
+        background: linear-gradient(
+          to right,
+          #f7f7f7,
+          #d4e3f1
+        ); /* Light gradient */
+        font-family: Arial, sans-serif; /* Ensuring a clean font */
+        color: #333; /* Dark text for readability */
+        margin: 0;
+        padding: 0;
       }
 
-      footer p {
-        margin: 0; /* Remove any extra margin from the paragraph */
+      /* Background for specific sections */
+      .page-container {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 1)
+        ); /* A soft white gradient */
+        padding: 40px;
+        border-radius: 10px; /* Rounded corners for this section */
+      }
+
+      /* Footer Styles */
+      .footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 0.9em;
+      }
+
+      .footer ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer ul li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      .footer ul li a {
+        color: #ddd;
+        text-decoration: none;
+      }
+
+      .footer ul li a:hover {
+        color: #fff;
+        text-decoration: underline;
       }
     </style>
   </head>
 
   <header>
-    <h1>Sample Download Website</h1>
+    <h1>Sample Page</h1>
   </header>
 
   <body>
     <!-- Sticky Navigation Bar -->
     <header class="navbar">
       <div class="logo">
-        <h2>BookSite</h2>
+        <h2>Sample Page</h2>
         <!-- Your website name or logo -->
       </div>
       <nav>
@@ -244,7 +283,7 @@
     </header>
 
     <div class="page-container">
-      <h1>Sample Download Website</h1>
+      <h1>Sample Page</h1>
       <div class="card-container">
         <div class="card">
           <img
@@ -289,8 +328,14 @@
       </div>
     </div>
 
-    <footer>
-      <p>&copy; 2025 Sample Page. All rights reserved.</p>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <p>&copy; 2025 BookSite. All rights reserved.</p>
+      <ul>
+        <li><a href="#privacy-policy">Privacy Policy</a></li>
+        <li><a href="#terms-of-service">Terms of Service</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
     </footer>
   </body>
 </html>
