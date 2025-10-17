@@ -1,87 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Download Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      flex-direction: column;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Sample Book Download Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+      }
 
-    .book-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+      .book-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
 
-    .book-item {
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 200px;  /* Adjust width for consistency */
-      text-align: center;
-      padding: 15px;
-      margin-bottom: 30px; /* Adds space below each book item */
-    }
+      .book-item {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px; /* Adjust width for consistency */
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 30px; /* Adds space below each book item */
+      }
 
-    .book-item img {
-      width: 100%; /* Ensures the image takes up the full width */
-      height: 250px; /* Fixed height for consistency */
-      object-fit: cover; /* Ensures the image fills the area */
-      border-radius: 4px; /* Optional: Adds rounded corners */
-      margin-bottom: 15px; /* Adds space between image and title */
-    }
+      .book-item img {
+        width: 100%; /* Ensures the image takes up the full width */
+        height: 250px; /* Fixed height for consistency */
+        object-fit: cover; /* Ensures the image fills the area */
+        border-radius: 4px; /* Optional: Adds rounded corners */
+        margin-bottom: 15px; /* Adds space between image and title */
+      }
 
-    .book-item h3 {
-      font-size: 16px;
-      color: #333;
-      margin: 10px 0;
-    }
+      .book-item h3 {
+        font-size: 16px;
+        color: #333;
+        margin: 10px 0;
+      }
 
-    .download-btn {
-      background-color: #4CAF50;
+      .download-btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .download-btn:hover {
+        background-color: #45a049;
+      }
+
+       footer {
+      background-color: #333;
       color: white;
+      text-align: center;
       padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
+      margin-top: 30px;
     }
+    </style>
+  </head>
 
-    .download-btn:hover {
-      background-color: #45a049;
-    }
-  </style>
-</head>
-<body>
+  <header>
+    <h1>Sample Download Website</h1>
+  </header>
 
-  <div class="book-container">
-    <div class="book-item">
-      <img src="files/LinuxEnterpriseCluster.jpg" alt="Book 1">
-      <h3>Linux Enterprise Cluster</h3>
-      <a href="files/LinuxEnterpriseCluster.pdf" class="download-btn">Download</a>
+  <body>
+    <div class="book-container">
+      <div class="book-item">
+        <img src="files/LinuxEnterpriseCluster.jpg" alt="Book 1" />
+        <h3>Linux Enterprise Cluster</h3>
+        <a href="files/LinuxEnterpriseCluster.pdf" class="download-btn">Download</a>
+      </div>
+      <div class="book-item">
+        <img src="files/ObjectOrientedPHP.jpeg" alt="Book 2" />
+        <h3>Object Oriented PHP</h3>
+        <a href="files/ObjectOrientedPHP.pdf" class="download-btn">Download</a>
+      </div>
+      <div class="book-item">
+        <img src="files/PGPAndGPG.jpg" alt="Book 2" />
+        <h3>PGP and GPG</h3>
+        <a href="files/PGPAndGPG.pdf" class="download-btn">Download</a>
+      </div>
     </div>
-    <div class="book-item">
-      <img src="files/ObjectOrientedPHP.jpeg" alt="Book 2">
-      <h3>Object Oriented PHP</h3>
-      <a href="files/ObjectOrientedPHP.pdf" class="download-btn">Download</a>
-    </div>
-    <div class="book-item">
-      <img src="files/PGPAndGPG.jpg" alt="Book 2">
-      <h3>PGP and GPG</h3>
-      <a href="files/PGPAndGPG.pdf" class="download-btn">Download</a>
-    </div>
-  </div>
 
-</body>
+    <footer>
+      <p>&copy; 2025 Sample Page. All rights reserved.</p>
+    </footer>
+
+  </body>
 </html>
