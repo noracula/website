@@ -145,6 +145,67 @@
         box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.6); /* Blue glow for focus */
       }
 
+      /* Sticky Navbar */
+      .navbar {
+        position: sticky;
+        top: 0;
+        background-color: #333; /* Dark background for the navbar */
+        color: white;
+        padding: 15px 20px; /* Padding for spacing */
+        display: flex;
+        justify-content: space-between; /* Logo on the left, menu on the right */
+        align-items: center;
+        z-index: 1000; /* Keeps navbar on top of other content */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      }
+
+      /* Logo styles */
+      .navbar .logo h2 {
+        margin: 0;
+        font-size: 1.8em;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      /* Navigation menu styles */
+      .navbar nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar nav ul li {
+        margin: 0 15px; /* Space between menu items */
+      }
+
+      .navbar nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.1em;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Hover effect for navigation links */
+      .navbar nav ul li a:hover {
+        background-color: #007bff; /* Blue background on hover */
+      }
+
+      /* Responsive Navbar: Stacks menu on small screens */
+      @media (max-width: 768px) {
+        .navbar nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .navbar nav ul li {
+          margin: 10px 0;
+        }
+      }
+
       footer {
         background-color: #333; /* Dark background to match the header */
         color: white; /* White text for contrast */
@@ -166,6 +227,22 @@
   </header>
 
   <body>
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar">
+      <div class="logo">
+        <h2>BookSite</h2>
+        <!-- Your website name or logo -->
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <div class="page-container">
       <h1>Sample Download Website</h1>
       <div class="card-container">
