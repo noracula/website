@@ -16,49 +16,105 @@
         min-height: 100vh;
       }
 
-      .book-container {
+      /* Card container */
+      .card {
+        background-color: #fff; /* White background */
+        border-radius: 12px; /* Rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 20px; /* Add padding inside the card */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+        margin: 20px; /* Space between cards */
+      }
+
+      /* Card title */
+      .card h3 {
+        font-size: 1.2em; /* Slightly larger title */
+        color: #333; /* Dark text for readability */
+        margin-bottom: 10px; /* Space below the title */
+      }
+
+      /* Card description or additional text */
+      .card p {
+        font-size: 1em;
+        color: #666; /* Lighter text color for description */
+        margin-bottom: 20px; /* Space below description */
+      }
+
+      /* Download button style */
+      .card .download-btn {
+        background-color: #4caf50; /* Green button */
+        color: white; /* White text */
+        padding: 10px 20px; /* Padding inside the button */
+        border-radius: 5px; /* Rounded corners for button */
+        text-align: center;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease; /* Smooth color transition */
+      }
+
+      /* Hover effect on the card */
+      .card:hover {
+        transform: translateY(-5px); /* Card moves slightly up */
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+      }
+
+      /* Hover effect on the download button */
+      .card .download-btn:hover {
+        background-color: #45a049; /* Darker green on hover */
+      }
+
+      /* Container for the entire page content */
+      .page-container {
         display: flex;
         justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-
-      .book-item {
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 200px; /* Adjust width for consistency */
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh; /* Ensure it takes full height of the screen */
+        background-color: #f9f9f9; /* Light background */
+        padding: 20px;
         text-align: center;
-        padding: 15px;
-        margin-bottom: 30px; /* Adds space below each book item */
       }
 
-      .book-item img {
-        width: 100%; /* Ensures the image takes up the full width */
-        height: 250px; /* Fixed height for consistency */
-        object-fit: cover; /* Ensures the image fills the area */
-        border-radius: 4px; /* Optional: Adds rounded corners */
-        margin-bottom: 15px; /* Adds space between image and title */
-      }
-
-      .book-item h3 {
-        font-size: 16px;
+      /* Title for the page */
+      .page-container h1 {
+        font-size: 2.5em;
         color: #333;
-        margin: 10px 0;
+        margin-bottom: 30px;
+        font-family: "Poppins", sans-serif; /* Modern font */
       }
 
-      .download-btn {
-        background-color: #4caf50;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
+      /* Grid container for the cards */
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(250px, 1fr)
+        ); /* Flexible columns */
+        gap: 20px; /* Space between cards */
+        width: 100%;
+        max-width: 1200px; /* Limit the max width of the grid */
+        margin-top: 30px;
       }
 
-      .download-btn:hover {
-        background-color: #45a049;
+      /* Make sure the cards inside the grid are responsive */
+      .card {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 20px;
+      }
+
+      /* Adjust card styles on smaller screens */
+      @media (max-width: 768px) {
+        .card-container {
+          grid-template-columns: repeat(
+            auto-fill,
+            minmax(200px, 1fr)
+          ); /* Smaller columns */
+        }
       }
 
       footer {
@@ -82,23 +138,49 @@
   </header>
 
   <body>
-    <div class="book-container">
-      <div class="book-item">
-        <img src="files/LinuxEnterpriseCluster.jpg" alt="Book 1" />
-        <h3>Linux Enterprise Cluster</h3>
-        <a href="files/LinuxEnterpriseCluster.pdf" class="download-btn"
-          >Download</a
-        >
-      </div>
-      <div class="book-item">
-        <img src="files/ObjectOrientedPHP.jpeg" alt="Book 2" />
-        <h3>Object Oriented PHP</h3>
-        <a href="files/ObjectOrientedPHP.pdf" class="download-btn">Download</a>
-      </div>
-      <div class="book-item">
-        <img src="files/PGPAndGPG.jpg" alt="Book 2" />
-        <h3>PGP and GPG</h3>
-        <a href="files/PGPAndGPG.pdf" class="download-btn">Download</a>
+    <div class="page-container">
+      <h1>Sample Download Website</h1>
+      <div class="card-container">
+        <div class="card">
+          <img
+            src="files/LinuxEnterpriseCluster.jpg"
+            alt="Book 1"
+            style="width: 100%; border-radius: 8px"
+          />
+          <h3>Linux Enterprise Cluster</h3>
+          <p>
+            Learn how to build a highly available Linux cluster with the best
+            practices for enterprise environments.
+          </p>
+          <a href="files/LinuxEnterpriseCluster.pdf" class="download-btn"
+            >Download</a
+          >
+        </div>
+        <div class="card">
+          <img
+            src="files/ObjectOrientedPHP.jpeg"
+            alt="Book 2"
+            style="width: 100%; border-radius: 8px"
+          />
+          <h3>Object Oriented PHP</h3>
+          <p>
+            Master object-oriented programming with PHP and build scalable
+            applications.
+          </p>
+          <a href="files/ObjectOrientedPHP.pdf" class="download-btn"
+            >Download</a
+          >
+        </div>
+        <div class="card">
+          <img
+            src="files/PGPAndGPG.jpg"
+            alt="Book 2"
+            style="width: 100%; border-radius: 8px"
+          />
+          <h3>PGP and GPG</h3>
+          <p>Encrypt and secure your emails using PGP and GPG for privacy.</p>
+          <a href="files/PGPAndGPG.pdf" class="download-btn">Download</a>
+        </div>
       </div>
     </div>
 
